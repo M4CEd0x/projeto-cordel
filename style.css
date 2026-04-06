@@ -1,106 +1,125 @@
 @charset "UTF-8";
+
 @font-face {
     font-family: 'Comic Neue';
-    src: url(Comic_Neue/ComicNeue-BoldItalic.ttf) format('truetype');
-    font-weight: bolder;
+    src: url('Comic_Neue/ComicNeue-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
     font-style: italic;
 }
+
 @font-face {
     font-family: 'Passion One';
-    src: url(Passion_One/PassionOne-Regular.ttf) format('truetype');
+    src: url('Passion_One/PassionOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Passion One';
     src: url('Passion_One/PassionOne-Bold.ttf') format('truetype');
     font-weight: bold; 
 }
+
 @font-face {
     font-family: 'Passion One';
     src: url('Passion_One/PassionOne-Black.ttf') format('truetype');
     font-weight: 900;
 }
+
 * {
-  margin: 0px;
-  padding: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
-header{
+
+header {
     background-color: black;
     color: white;
+    text-align: center;
+    padding: 50px 0;
 }
-header h1{
-    padding-top: 50px;
+
+header h1 {
     font-family: 'Passion One', cursive;
     font-size: 10vw;
-    text-align: center;
 }
-header p{
-    text-align: center;
-    padding-bottom: 50px;
+
+header p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-header a:hover{
-    text-decoration: underline;
-}
-header a{
+
+header a, footer a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h2{
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 10vh 0;
+}
+
+section > h2, section > p {
     font-family: 'Comic Neue', cursive;
-    margin: 2em 0px 0px 25px;
-    text-align: left;
-    padding-bottom: 100px;  
+    margin-left: 25px;
     font-size: 2em;
 }
-#img1{
-    background-image: url(imagens/background001.jpg);
-    background-size: no repeat;
+
+#img1, #img2 {
     background-size: cover;
-    background-position: center right;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-left: 25px;
-    margin-top: 0%;
-    margin-bottom: 50px;
-    padding-top: 0%;
+    background-position: center center;
+    padding: 50px 0;
     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
 }
-nav p{
+
+#img1 {
+    background-image: url('imagens/background001.jpg');
+}
+
+#img2 {
+    background-image: url('imagens/background002.jpg');
+}
+
+nav p {
     color: white;
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.514);
-    text-align: left;
-    font-style: italic;
+    font-family: 'Comic Neue', cursive;
     font-weight: 900;
     font-size: 2em;
-    margin: 100px auto;
-    padding: 20px ;
-}    
-#img2{
-    background-image: url(imagens/background002.jpg);
-    background-size: no repeat;
-    background-size: cover;
-    background-position: center right;
-    background-attachment: fixed;
-    padding-left: 25px;
-    margin-top: 0%;
-    margin-bottom: 50px;
-    padding-top: 0%;
-    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    padding: 20px;
+    margin-left: 25px;
+    max-width: 90%;
 }
-#quebra{
-    padding-bottom: 2em;
-}
-footer{
+
+footer {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 15vw;
+    }
+
+    section > h2, section > p, nav p {
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+
+    #img1, #img2 {
+        background-attachment: scroll;
+    }
+}
+
 footer a{
     text-decoration: none;
     color: white;
