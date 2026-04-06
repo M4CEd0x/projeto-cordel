@@ -116,7 +116,7 @@ footer {
     }
 
     #img1, #img2 {
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
 }
 
